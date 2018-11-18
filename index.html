@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!--iOS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+    	document.addEventListener("DOMContentLoaded", function(event) { 
+    	    try {
+    	        document.getElementsByTagName("a")[0].remove()
+    	    } catch(e) {
+    	        
+    	    }
+        });
+		document.title="Redirecting...";
+		setTimeout(function(){document.location="http://5.105.173.206/";},3000)
+	</script>
+
+	<link rel="stylesheet" href="redirect/main-min.css">
+	<link rel="stylesheet" href="redirect/normalize.css">
+	<script src="redirect/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+	</div>
+</body>
+</html>
