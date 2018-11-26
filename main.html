@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Main</title>
+
+
+	<link href="main/reset.css" rel="stylesheet">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/default.js"></script>
+
+
+
+	<link href="main/fonts.css" rel="stylesheet">
+	<link href="main/style.css" rel="stylesheet">
+	<script src="main/script.js"></script>
+</head>
+<body>
+	<section class="main bkg-opacity7">
+		<div class="container">
+			<div class="header">
+				<nav class="nav">
+					<ul>
+						<a href="#main"><li class="button button-hdr" text="Главная">Главная</li></a>
+						<a href="#aboutus"><li class="button button-hdr" text="О нас">О нас</li></a>
+						<a href="#service"><li class="button button-hdr" text="Услуги">Услуги</li></a>
+						<a href="#order"><li class="button button-hdr" text="Заказ">Заказ</li></a>
+						<a href="#contact"><li class="button button-hdr" text="Контакты">Контакты</li></a>
+					</ul>
+				</nav>
+			</div>
+			<div class="wrapper-center">
+				<div class="center">
+					<div class="centered-text">
+						<h1>Мы автоматизируем всю вашу работу</h1>
+						<h2>Разработка программного обеспечения</h2>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<h3>Далее</h2>
+			</div>
+		</div>
+	</section>
+	<section class="aboutus">
+		<div class="container">
+			<div class="wrapper">
+				<div class="helper">
+				<h1 class="section__title">О нас</h1>
+				<div class="list __iconset2background" url="main/img/iconset.png">
+					<div class="box">
+						<div class="icon __icon" offset="0|0"></div>
+						<div class="content">
+							<h1 class="title">Наш состав:</h1>
+							<h2 class="text">команда программистов, специализирующихся на разработке компьютерного по.</h2>
+						</div>
+					</div>
+					<div class="box">
+						<div class="icon __icon" offset="-100|0"></div>
+						<div class="content">
+							<h1 class="title">Наши задачи:</h1>
+							<h2 class="text">Написание прикладных компьютерных программ на заказ.<br>Разработка информационных систем для автоматизации производства и бизнеса.<br>Автоматизация всех сфер деятельности предприятия.</h2>
+						</div>
+					</div>
+					<div class="box">
+						<div class="icon __icon" offset="-200|0"></div>
+						<div class="content">
+							<h1 class="title">Наши обязанности:</h1>
+							<h2 class="text">- написание отладка и внедрение ПО<br>- обучение пользователей<br>- доработка и сопровождение ПО при необходимости</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section class="service bkg-opacity6">
+		<div class="container">
+			<div class="wrapper">
+				<div class="helper">
+					<h1 class="section__title">Предлагаемые услуги</h1>
+					<div class="wrapper-table">
+						<div class="table">
+							<h1 class="title">скрипты для игр</h1>
+							<span></span>
+							<p>samp</p>
+							<p>minecraft</p>
+							<p>counter-strike</p>
+							<p>биндеры</p>
+							<p>и другое</p>
+						</div>
+						<div class="table">
+							<h1 class="title">программы</h1>
+							<span></span>
+							<p>автоматизация excel<br>и word</p>
+							<p>клиент-сервер</p>
+							<p>и любые другие программы</p>
+						</div>
+					</div>
+				</div>
+				<h2 class="bottom_title">выполняем заказ без предоплаты.<br>В первую очередь предоставляем видео-доказательство выполненной работы.</h2>
+			</div>
+		</div>
+	</section>
+	<section class="order">
+		<div class="fade"></div>
+		<div class="container">
+			<div class="wrapper">
+				<form class="form">
+						<div class="head">
+							<h1 class="title">оформление заказа</h1>
+						</div>
+						<div class="body">
+							<div class="item">
+								<h1 class="hint">email или номер телефона</h1>
+								<input type="" class="area email" required placeholder="your_email@mail.box">
+							</div>
+							<div class="item">
+								<h1 class="hint">описание</h1>
+								<textarea class="area description" name="description" required></textarea>
+							</div>
+								<h1 class="status"></h1>
+							<div class="item">
+								<input type="submit" class="area button" value="отправить">
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section class="footer">
+		<div class="container">
+			<div class="wrapper">
+				<div class="left">
+					<h1 class="copyright">© Copyright 2018</h1>
+				</div>
+				<div class="divideblock"></div>
+				<div class="right">
+					<h1>e-mail:</h1>
+					<h1>mariupolcity81@gmail.com</h1>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<script>
+		var gURL="http://5.105.173.206/order.php";
+		var list=document.querySelectorAll(".__iconset2background");
+		for (var i=list.length-1; i>=0; i--) {
+			var url=list[i].getAttribute("url");
+
+			var iconlist=list[i].querySelectorAll(".__icon");
+			for (var n=iconlist.length-1; n>=0; n--) {
+				var offset=iconlist[n].getAttribute("offset").split("|");
+				iconlist[n].style["backgroundImage"]="url("+(iconlist[n].getAttribute("url")?iconlist[n].getAttribute("url"):url)+")";
+				iconlist[n].style.backgroundPositionX=offset[0]+"px";
+				iconlist[n].style.backgroundPositionY=offset[1]+"px";
+			}
+		}
+		document.querySelector(".form textarea").placeholder="опишите четко Техническое задание.\nтакже можете указать скайп или любые\nдругие контакты для связи с вами";
+
+
+
+
+
+
+		$("form").on( "submit", function( event ) {
+			event.preventDefault();
+			var email=$(this).find(".email")[0].value;
+			var desc=$(this).find(".description")[0].value;
+			var data={act:"newpost",email:email,description:desc}
+			send("POST",gURL, JSON.stringify(data), function(result,msg) {
+				//var data=JSON.parse(msg);
+				if(result=="success")
+					if(msg=="OK")
+						form_updatestatus("OK");
+					else form_updatestatus("CANCEL");
+				else form_updatestatus("ERROR_NETWORK");
+			});
+		});
+		function form_updatestatus(status) {
+			var msg,el=$(".form .status")[0],colors={OK:"#32d47a",CANCEL:"#d29713",ERROR_NETWORK:"#d42b2b"}
+			if(status=="OK")
+				msg="Заявка была успешно отправлена";
+			else if(status=="CANCEL")
+				msg="Произошли неполадки. Попробуйте позже";
+			else if(status=="ERROR_NETWORK")
+				msg="Не удалось отправить заявку.\nПопробуйте позже";
+			el.innerText=msg;
+			el.style.color=colors[status];
+		}
+	</script>
+</body>
+</html>
+
+
+
+
