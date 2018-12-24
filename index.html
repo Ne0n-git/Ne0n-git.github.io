@@ -6,15 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script>
-    	document.addEventListener("DOMContentLoaded", function(event) { 
-    	    try {
-    	        //document.getElementsByTagName("a")[0].remove()
-    	    } catch(e) {
-    	        
-    	    }
-        });
+		var g_ip="5.105.173.206";
+		$("#testimg").src="http://"+g_ip+"/favicon.png";
+		document.addEventListener("DOMContentLoaded", function(event) {
+			console.log($("#testimg").width());
+			console.log($("#testimg").height());
+		});
 		document.title="Redirecting...";
-		setTimeout(function(){document.location="http://5.105.173.206/fromgithub";},2000)
+		setTimeout(function(){document.location="http://"+g_ip+"/fromgithub";},2000)
 	</script>
 
 	<link rel="stylesheet" href="redirect/main-min.css">
