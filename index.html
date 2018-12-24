@@ -15,10 +15,10 @@
 			document.title="Redirecting...";
 			var img=$("#testimg")[0];
 			img.src="http://"+g_ip+"/favicon.ico";
-			img.on("load",function() {
+			img.load(function() {
 				console.log("loaded");
 			});
-			img.on("error",function() {
+			img.error(function() {
 				console.log("error");
 			});
 			if($("#testimg")[0].width!=512)
