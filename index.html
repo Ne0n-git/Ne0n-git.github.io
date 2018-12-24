@@ -18,7 +18,7 @@
 			$("#testimg").on("load",function(){
 				console.log("loaded");
 			});
- 			$("#testimg").on("error",(function() {
+ 			$("#testimg").on("error",function() {
  				console.log("error");
  			});
 			if($("#testimg")[0].width!=512)
