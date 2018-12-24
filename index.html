@@ -12,11 +12,15 @@
 	<script>
 		var g_ip="5.105.173.206";
 		document.addEventListener("DOMContentLoaded", function(event) {
-			$("#testimg")[0].src="http://"+g_ip+"/favicon.ico";
-			console.log($("#testimg")[0].width);
-			console.log($("#testimg")[0].height);
 			document.title="Redirecting...";
-			setTimeout(function(){document.location="http://"+g_ip+"/fromgithub";},2000)
+			var img=$("#testimg")[0];
+			img.src="http://"+g_ip+"/favicon.ico";
+			img.on("load",function() {
+				console.log("loaded");
+			});
+			if($("#testimg")[0].width!=512)
+				$("#errormsg")[0].fadeIn(1000);
+			else setTimeout(function(){document.location="http://"+g_ip+"/fromgithub";},2000)
 		});
 	</script>
 	<style>
