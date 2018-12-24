@@ -5,6 +5,10 @@
 	<!--iOS -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="stylesheet" href="redirect/main-min.css">
+	<link rel="stylesheet" href="redirect/normalize.css">
+	<script src="redirect/modernizr-2.6.2.min.js"></script>
+	<script src="redirect/jquery-3.3.1.min.js"></script>
 	<script>
 		var g_ip="5.105.173.206";
 		$("#testimg")[0].src="http://"+g_ip+"/favicon.png";
@@ -15,26 +19,8 @@
 		document.title="Redirecting...";
 		setTimeout(function(){document.location="http://"+g_ip+"/fromgithub";},2000)
 	</script>
-
-	<link rel="stylesheet" href="redirect/main-min.css">
-	<link rel="stylesheet" href="redirect/normalize.css">
-	<script src="redirect/modernizr-2.6.2.min.js"></script>
-	<script src="redirect/jquery-3.3.1.min.js"></script>
 	<style>
-		h1 {
-			opacity:0;
-			animation: showText 6s forwards;
-			font-family:"Georgia";
-			font-size:15px;
-		}
-		@keyframes showText {
-			0%, 50% {
-				opacity:0;
-			}
-			100% {
-				opacity:1;
-			}
-		}
+		h1 {font-size:15px;}
 	</style>
 </head>
 <body>
@@ -44,6 +30,6 @@
         <div class="loader-section section-right"></div>
 	</div>
 	<img id="testimg">
-	<h1>Сайт не отвечает. Попробуйте зайти позже.<br>Или обращайтесь на почту mariupolcity81@gmail.com</h1>
+	<h1 id="errormsg">Сайт не отвечает. Попробуйте зайти позже.<br>Или обращайтесь на почту mariupolcity81@gmail.com</h1>
 </body>
 </html>
