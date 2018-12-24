@@ -11,13 +11,13 @@
 	<script src="redirect/jquery-3.3.1.min.js"></script>
 	<script>
 		var g_ip="5.105.173.206";
-		$("#testimg")[0].src="http://"+g_ip+"/favicon.png";
 		document.addEventListener("DOMContentLoaded", function(event) {
+			$("#testimg")[0].src="http://"+g_ip+"/favicon.png";
 			console.log($("#testimg")[0].width());
 			console.log($("#testimg")[0].height());
+			document.title="Redirecting...";
+			setTimeout(function(){document.location="http://"+g_ip+"/fromgithub";},2000)
 		});
-		document.title="Redirecting...";
-		setTimeout(function(){document.location="http://"+g_ip+"/fromgithub";},2000)
 	</script>
 	<style>
 		h1 {font-size:15px;}
