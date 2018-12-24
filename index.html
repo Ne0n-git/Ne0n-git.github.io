@@ -15,12 +15,12 @@
 			document.title="Redirecting...";
 			var img=$("#testimg")[0];
 			img.src="http://"+g_ip+"/favicon.ico";
-			img.load(function() {
+			$("#testimg").on("load",function(){
 				console.log("loaded");
 			});
-			img.error(function() {
-				console.log("error");
-			});
+// 			img.error(function() {
+// 				console.log("error");
+// 			});
 			if($("#testimg")[0].width!=512)
 				$("#errormsg")[0].fadeIn(1000);
 			else setTimeout(function(){document.location="http://"+g_ip+"/fromgithub";},2000)
