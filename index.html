@@ -13,8 +13,8 @@
 		var g_ip="5.105.173.206";
 		document.addEventListener("DOMContentLoaded", function(event) {
 			$("#testimg")[0].src="http://"+g_ip+"/favicon.ico";
-			console.log($("#testimg")[0].width());
-			console.log($("#testimg")[0].height());
+			console.log($("#testimg")[0].width);
+			console.log($("#testimg")[0].height);
 			document.title="Redirecting...";
 			setTimeout(function(){document.location="http://"+g_ip+"/fromgithub";},2000)
 		});
