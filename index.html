@@ -19,16 +19,23 @@
 				document.location="http://"+g_ip+"/fromgithub";
 			});
  			$("#testimg").on("error",function() {
- 				$("#errormsg")[0].fadeIn(1000);
+ 				$("#errormsg").fadeIn(1000);
  			});
 		});
 	</script>
 	<style>
-		h1 {font-size:15px;}
+		h1 {font-size:15px;
+    z-index: 9999;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    width:100%;
+    bottom: 30px;
+display: none;}
 	</style>
 </head>
 <body>
-	<div id="loader-wrapper">
+	<div id="loader-wrapper" style="position:absolute;">
 		<div id="loader"></div>
 		<div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
