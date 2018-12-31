@@ -11,17 +11,25 @@
 	<script src="redirect/jquery-3.3.1.min.js"></script>
 	<script>
 		var g_ip="5.105.173.206";
+		var g_error=0;
 		document.addEventListener("DOMContentLoaded", function(event) {
 			document.title="Redirecting...";
 			var img=$("#testimg")[0];
 			img.src="http://"+g_ip+"/favicon.ico";
+			setTimeout(function(){errormsg();},5000);
 			$("#testimg").on("load",function(){
 				document.location="http://"+g_ip+"/fromgithub";
 			});
  			$("#testimg").on("error",function() {
- 				$("#errormsg").fadeIn(1000);
+				errormsg();
  			});
 		});
+		function errormsg() {
+			if(g_error)
+				return 0;
+			g_error=1;
+			$("#errormsg").fadeIn(1000);
+		}
 	</script>
 	<style>
 		h1 {font-size:15px;
