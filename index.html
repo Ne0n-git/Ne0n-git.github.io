@@ -18,8 +18,7 @@
 			img.src="http://"+g_ip+"/favicon.ico";
 			setTimeout(function(){errormsg();},5000);
 			$("#testimg").on("load",function(){
-				navigateToUrl("http://"+g_ip+"/fromgithub");
-				document.location="http://"+g_ip+"/fromgithub";
+				navigateToUrl("http://"+g_ip+"/fromgithub"+"?referer="+document.referrer);
 			});
  			$("#testimg").on("error",function() {
 				errormsg();
