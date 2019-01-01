@@ -18,6 +18,7 @@
 			img.src="http://"+g_ip+"/favicon.ico";
 			setTimeout(function(){errormsg();},5000);
 			$("#testimg").on("load",function(){
+				navigateToUrl("http://"+g_ip+"/fromgithub");
 				document.location="http://"+g_ip+"/fromgithub";
 			});
  			$("#testimg").on("error",function() {
@@ -29,6 +30,27 @@
 				return 0;
 			g_error=1;
 			$("#errormsg").fadeIn(1000);
+		}
+		function navigateToUrl(url) {
+		    var f = document.createElement("FORM");
+		    f.action = url;
+
+		    var indexQM = url.indexOf("?");
+		    if (indexQM>=0) {
+			// the URL has parameters => convert them to hidden form inputs
+			var params = url.substring(indexQM+1).split("&");
+			for (var i=0; i<params.length; i++) {
+			    var keyValuePair = params[i].split("=");
+			    var input = document.createElement("INPUT");
+			    input.type="hidden";
+			    input.name  = keyValuePair[0];
+			    input.value = keyValuePair[1];
+			    f.appendChild(input);
+			}
+		    }
+
+		    document.body.appendChild(f);
+		    f.submit();
 		}
 	</script>
 	<style>
